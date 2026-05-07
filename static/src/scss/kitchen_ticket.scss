@@ -1,0 +1,31 @@
+// CS_POS_KITCHEN_TICKET
+// Mejoras de legibilidad para el ticket de cocina. Compatible con impresora térmica 80mm.
+
+// Bloque de mesa / sala / comensales
+.cs-kitchen-info {
+    font-size: 130%;
+    margin: 8px 0 4px 0;
+
+    div {
+        margin: 3px 0;
+    }
+
+    strong {
+        font-size: 110%;
+    }
+}
+
+// Líneas de producto: el template base ya aplica font-size: 150%
+// Reforzamos el nombre del producto y añadimos separación entre líneas
+.orderline {
+    margin-bottom: 6px;
+
+    .product-name {
+        font-weight: bold;
+    }
+
+    // Notas e instrucciones especiales
+    .fst-italic {
+        font-size: 95%;
+    }
+}

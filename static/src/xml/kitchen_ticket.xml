@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="cs_pos_kitchen_ticket.OrderChangeReceipt"
+       t-inherit="point_of_sale.OrderChangeReceipt"
+       t-inherit-mode="extension">
+
+        <!--
+            Reemplaza el bloque "Guest: X" de pos_restaurant con Mesa, Sala y Comensales en español.
+            pos_restaurant añade: <div class="pos-customer-info" t-if="data.customer_count">Guest: X</div>
+            Se sustituye por nuestro bloque con los tres campos.
+            table_name y floor_name son cadenas vacías si el pedido no tiene mesa asignada.
+        -->
+        <xpath expr="//div[hasclass('pos-customer-info')]" position="replace">
+            <div class="cs-kitchen-info text-center">
+                <div t-if="data.table_name" class="cs-kitchen-table">
+                    Mesa: <strong t-esc="data.table_name"/>
+                </div>
+                <div t-if="data.floor_name" class="cs-kitchen-floor">
+                    Sala: <strong t-esc="data.floor_name"/>
+                </div>
+                <div t-if="data.customer_count" class="cs-kitchen-guests">
+                    Comensales: <strong t-esc="data.customer_count"/>
+                </div>
+            </div>
+        </xpath>
+
+    </t>
+</templates>
