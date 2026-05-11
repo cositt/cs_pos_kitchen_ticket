@@ -5,7 +5,7 @@ import { renderToElement } from "@web/core/utils/render";
 import { patch } from "@web/core/utils/patch";
 
 // Cambia a false cuando tengas impresora real configurada
-const CS_KITCHEN_PREVIEW = true;
+const CS_KITCHEN_PREVIEW = false;
 
 patch(PosStore.prototype, {
     // Añade table_name y floor_name al objeto de datos del ticket

@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Odoo
+*.pyc
+.coverage
+.pytest_cache/
+
+# Node (if using frontend tools)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Misc
+*.log
+*.pot
+.env
+.env.local
